@@ -1,5 +1,4 @@
 import React from "react";
-import schoolImg from "../assets/hero.png";
 
 function About() {
 	return (
@@ -12,9 +11,6 @@ function About() {
 						Lamb of God Special Education Academy of Buhangin, Inc. (LOGSEA) has been
 						dedicated to nurturing and educating children with special needs in Davao City since 1992.
 					</p>
-				</div>
-				<div style={{flex: 0.7}}>
-					<img src={schoolImg} alt="school building" style={{width: '100%', borderRadius: 12}} />
 				</div>
 			</div>
 		</section>
