@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaBook, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
+import bgImage from "../assets/images/backgrounds/Why.jpg";
 
 function WhyChooseUs() {
   const ref = useRef(null);
@@ -24,7 +25,16 @@ function WhyChooseUs() {
   }, []);
 
   return (
-    <section className={`why ${visible ? "visible" : ""}`} id="why" ref={ref}>
+    <section
+      className={`why ${visible ? "visible" : ""}`}
+      id="why"
+      ref={ref}
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+      }}
+    >
       <h2>Why Choose LGSA?</h2>
       <div className="cards">
         <div className="card">

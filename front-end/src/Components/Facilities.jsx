@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FaBook, FaMicroscope, FaFootballBall, FaLaptop } from "react-icons/fa";
 import bgImage from "../assets/images/backgrounds/Facilities.jpg";
 
@@ -26,9 +26,28 @@ const facilitiesData = [
 ];
 
 function Facilities() {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
-      className="facilities-section"
+      ref={sectionRef}
+      className={`facilities-section ${visible ? "show" : ""}`}
       id="facilities"
       aria-labelledby="facilities-title"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -43,13 +62,12 @@ function Facilities() {
           </div>
 
           <div className="facilities-grid">
-            {facilitiesData.map((f, i) => (
-              <article
-                className="facility-card"
-                key={i}
-                role="article"
-                aria-labelledby={`facility-${i}-title`}
-              >
+              {facilitiesData.map((f, i) => (
+                <article
+                  className={`facility-card ${visible ? "card-show" : ""}`}
+                  style={{ transitionDelay: `${i * 120}ms` }}
+                  key={i}
+                >
                 <a
                   className="facility-card-link"
                   href="#contact"
