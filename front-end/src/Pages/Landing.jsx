@@ -8,15 +8,23 @@ import Programs from "../Components/Programs";
 import ContactForm from "../Components/ContactForm";
 import Footer from "../Components/Footer";
 
-function Landing() {
+export function LandingInner() {
   return (
-    <div className="landing-container">
-      <Header />
+    <>
       <Hero />
       <WhyChooseUs />
       <About />
       <Programs />
       <ContactForm />
+    </>
+  );
+}
+
+function Landing() {
+  return (
+    <div className="landing-container">
+      <Header />
+      <LandingInner />
       <Footer />
     </div>
   );
