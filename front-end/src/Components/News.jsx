@@ -2,6 +2,11 @@ import React, { useRef, useEffect, useState } from "react";
 import newsImg1 from "../assets/images/news/news1.png";
 import newsImg2 from "../assets/images/news/news2.png";
 import newsImg3 from "../assets/images/news/news3.png";
+import newsImg4 from "../assets/images/news/news4.png";
+import newsImg5 from "../assets/images/news/news5.png";
+import newsImg6 from "../assets/images/news/news6.png";
+import newsImg7 from "../assets/images/news/news7.png";
+import newsImg8 from "../assets/images/news/news8.png";
 
 const newsData = [
   {
@@ -29,7 +34,7 @@ const newsData = [
     link: "#",
   },
   {
-    image: newsImg1,
+    image: newsImg4,
     title: "Inclusive Learning Workshop for Educators",
     date: "December 10, 2025",
     description:
@@ -37,7 +42,7 @@ const newsData = [
     link: "#",
   },
   {
-    image: newsImg2,
+    image: newsImg5,
     title: "Student Leadership Training Program",
     date: "November 22, 2025",
     description:
@@ -45,7 +50,7 @@ const newsData = [
     link: "#",
   },
   {
-    image: newsImg3,
+    image: newsImg6,
     title: "Parent-Teacher Engagement Conference",
     date: "October 18, 2025",
     description:
@@ -53,7 +58,7 @@ const newsData = [
     link: "#",
   },
   {
-    image: newsImg1,
+    image: newsImg7,
     title: "Arts and Creativity Week Celebration",
     date: "September 30, 2025",
     description:
@@ -61,7 +66,7 @@ const newsData = [
     link: "#",
   },
   {
-    image: newsImg2,
+    image: newsImg8,
     title: "Health and Wellness Awareness Campaign",
     date: "August 25, 2025",
     description:
